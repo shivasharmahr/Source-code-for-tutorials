@@ -1,0 +1,204 @@
+body{
+    margin: 0;
+    padding:0;
+}
+a{
+    text-decoration:none;
+}
+
+/* Header section */
+.header{
+    margin:0;
+    border:0;
+    height:100px;
+    background-color:gainsboro;
+    
+}
+header h1{
+    margin:0;
+    padding:30px;
+    text-align:center;
+    font-family:fantasy;
+    font-size:40px;
+}
+/* Header section ends */
+
+/* Navbar section */
+nav{
+    position:sticky;
+    top:0;
+}
+nav ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:gray;
+}
+
+nav li{
+    float:left;
+}
+nav a{
+    display:block;
+    padding:10px;
+    text-decoration:none;
+    color:black;
+    text-align:center;
+}
+nav h2{
+    margin:0;
+    font-size:18px;
+}
+nav a:hover:not(.active){
+    background-color:white;
+}
+
+.active{
+    background-color:black;
+    color:white;
+}
+
+@media only screen and (max-width:400px)
+{
+    nav li{
+        float:none;
+    }
+}
+/* Navbar section ends */
+
+/* Heading of blog post*/
+h1{
+    font-size:35px;
+    text-align:center;
+}
+
+
+/* main content and aside content col75 and col25 starts*/
+.col75{
+    width:70%;
+    float:left;
+    margin:5px;
+    box-sizing:border-box;
+}
+
+.col25{
+    width:25%;
+    float:right;
+    margin:5px 20px 0 0;
+    box-sizing:border-box;
+}
+
+/* main content and aside content col75 and col25 ends */
+
+/* Article styling main page starts */
+article{
+    margin:15px 0;
+    background-color:gainsboro;
+    line-height: 1.5;
+    border:2px solid black;
+    border-radius:3px;
+    padding:10px;
+}
+
+article h3{
+    border-bottom:1px solid black;
+}
+
+ button{
+    padding:10px;
+    background-color:whitesmoke;
+    width:100%;
+}
+
+ button:hover{
+    background-color:black;
+}
+ button:hover a{
+    color:white;
+}
+ button a{
+    color:black;
+    font-size:15px;
+}
+/* Article styling main page ends */
+
+/* Asside part styling starts*/
+aside{
+    position:sticky;
+    top:52px; 
+    line-height: 25px;
+    
+}
+.asside{
+    border:2px solid black;
+    padding:10px;
+    text-align:center;
+    background-color:gainsboro;
+    margin-bottom:10px;
+}
+.asside h4{
+    margin:0px;
+    padding:10px;
+    border-bottom:1px solid black;
+}
+
+.asside a {
+    color:black;
+    display:block;
+    
+}
+.asside a:hover{
+    color:white;
+}
+.asside button{
+    margin:10px 0;
+    width:100%;
+}
+/* Asside part styling ends */
+
+
+.row:after{
+    content:"";
+    clear:both;
+    display:table;
+}
+
+/* when the screen size is 570 it will convert the aside and nav element position to static (its not sticky anymore). And the expands the col75 and col25 to full width and they are not floating any moer.*/
+@media only screen and (max-width:620px){
+    aside, nav{
+        position:static;
+    }
+    .col75, .col25{
+        width:100%;
+        margin:auto;
+    }
+}
+
+@media only screen and (max-height:650px){
+    .hidden{
+        display:none;
+    }
+}
+
+/* Footer section */
+footer{
+    position:relative;
+    bottom:0px;
+    background-color:gray;
+    height:70px;
+    width:100%;
+    text-align:center;
+}
+footer p{
+    padding: 5px 0 0 0;
+}
+footer a {
+    color:white;
+    padding:10px;
+}
+footer a:hover{
+    color:black;
+}
+/* Footer section ends */
+
